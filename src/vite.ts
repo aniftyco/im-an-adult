@@ -2,9 +2,11 @@ import 'dotenv/config';
 
 export default () => ({
   name: 'im-an-adult',
-  config() {
+  config(allow = []) {
     const define = Object.keys(process.env).reduce((env, key) => {
-      env[`import.meta.env.${key}`] = JSON.stringify(process.env[key]);
+      if (allow.includes(key)) {
+        env[`import.meta.env.${key}`] = process.env[key];
+      }
 
       return env;
     }, {});
