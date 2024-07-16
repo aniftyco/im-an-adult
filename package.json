@@ -1,0 +1,37 @@
+{
+  "name": "im-an-adult",
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "dist/vite.js",
+  "scripts": {
+    "start": "tsc -p tsconfig.json -w --preserveWatchOutput",
+    "build": "rimraf dist && tsc -p tsconfig.json",
+    "prepublishOnly": "npm run build"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": {
+    "name": "NiftyCo, LLC",
+    "email": "support@aniftyco.com",
+    "url": "https://aniftyco.com"
+  },
+  "contributors": [
+    {
+      "name": "Josh Manders",
+      "url": "https://x.com/joshmanders"
+    }
+  ],
+  "prettier": "@aniftyco/prettier",
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@aniftyco/prettier": "^0.1.0",
+    "@aniftyco/tsconfig": "^1.0.1",
+    "@types/node": "^20.14.10",
+    "prettier": "^3.3.3",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.5.3"
+  }
+}
